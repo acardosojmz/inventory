@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">inventory</string>
+
+    <string name="title_add">Add article</string>
+    <string name="article_add">Article</string>
+    <string name="description_add">Description</string>
+    <string name="brand_add">Brand</string>
+    <string name="category_add">Category</string>
+    <string name="unit_price_add">Price</string>
+    <string name="image_add">Image</string>
+    <string name="save_add">Save</string>
+</resources>
