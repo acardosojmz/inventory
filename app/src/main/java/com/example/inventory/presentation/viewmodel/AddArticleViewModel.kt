@@ -21,9 +21,7 @@ class AddArticleViewModel @Inject constructor(private val addArticleUseCase: Add
 
 
     fun addArticle(articleModel: ArticleModel){
-        viewModelScope.launch {
             addArticleUseCase.addArticle(articleModel)
-            //Log.e("ID",id.toString())
-        }
+
     }
 }

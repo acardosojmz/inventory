@@ -22,7 +22,7 @@ class AddArticleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAddArticleBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        addArticleModel.let {  }
+
         binding.btnSave.setOnClickListener {
             with(binding){
                 val article = etArticle.text.toString()
@@ -36,18 +36,26 @@ class AddArticleActivity : AppCompatActivity() {
 
                 val articleModel=ArticleModel(id=0,article=article,description=description,
                     brand=brand,category=category,price=price,image=image)
-                lifecycleScope.launch(Dispatchers.IO) {
-                    addArticleModel.addArticle(articleModel)
-                }
 
+               lifecycleScope.launch(Dispatchers.IO) {
+                   addArticleModel.let {
+                       it.addArticle(articleModel)
+                   }
+               }
             }
+
         }
         observer()
     }
 
-    private fun observer(){
-        lifecycleScope.launch(Dispatchers.IO) {
-            Log.e("ID", "${addArticleModel.id.value.toString()}")
+
+    private fun observer() {
+        addArticleModel.let {
+            lifecycleScope.launch(Dispatchers.IO) {
+
+                Log.e("ID", "${it.id.value}}")
+            }
         }
     }
+
 }
