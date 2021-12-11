@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Inventory">
         <activity
             android:name=".presentation.view.AddArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.view.ListArticleActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

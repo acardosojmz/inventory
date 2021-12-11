@@ -24,7 +24,7 @@ class AddArticleActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnSave.setOnClickListener {
-            with(binding){
+            with(binding) {
                 val article = etArticle.text.toString()
                 val description = etDescription.text.toString()
                 val brand = etBrand.text.toString()
