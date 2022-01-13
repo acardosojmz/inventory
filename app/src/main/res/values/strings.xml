@@ -9,4 +9,8 @@
     <string name="unit_price_add">Price</string>
     <string name="image_add">Image</string>
     <string name="save_add">Save</string>
+
+    <string name="main_add">Agregar</string>
+    <string name="main_list">Listar</string>
+
 </resources>

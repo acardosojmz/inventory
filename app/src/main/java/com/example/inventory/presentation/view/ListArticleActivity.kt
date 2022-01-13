@@ -31,7 +31,7 @@ class ListArticleActivity : AppCompatActivity() {
 
     private  fun observer() {
         listArticleViewModel.articleList.let {
-            lifecycleScope.launch(Dispatchers.IO) {
+           lifecycleScope.launch {
                listArticleViewModel.articleList.collect {
                    articleList = it
                    val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this@ListArticleActivity)
@@ -39,7 +39,7 @@ class ListArticleActivity : AppCompatActivity() {
                    articleAdapter = ArticleAdapter(articleList)
                    binding.articleRecyclerView.adapter = articleAdapter
                }
-            }
+           }
         }
     }
 }
